@@ -1,5 +1,5 @@
 Summary:	X Virtual Keyboard library
-Summary(pl.UTF-8):   Biblioteka wirtualnej klawiatury dla X
+Summary(pl.UTF-8):	Biblioteka wirtualnej klawiatury dla X
 Name:		libfakekey
 Version:	0.1
 Release:	1
@@ -21,7 +21,7 @@ Biblioteka wirtualnej klawiatury dla X.
 
 %package devel
 Summary:	Header files for libfakekey library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libfakekey
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libfakekey
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -35,7 +35,7 @@ Pliki nagłówkowe biblioteki libfakekey.
 
 %package static
 Summary:	Static libfakekey library
-Summary(pl.UTF-8):   Statyczna biblioteka libfakekey
+Summary(pl.UTF-8):	Statyczna biblioteka libfakekey
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
