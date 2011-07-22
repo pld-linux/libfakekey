@@ -2,7 +2,7 @@ Summary:	X Virtual Keyboard library
 Summary(pl.UTF-8):	Biblioteka wirtualnej klawiatury dla X
 Name:		libfakekey
 Version:	0.1
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://projects.o-hand.com/matchbox/sources/libfakekey/%{version}/%{name}-%{version}.tar.bz2
@@ -61,6 +61,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -76,7 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libfakekey.so
-%{_libdir}/libfakekey.la
 %{_includedir}/fakekey
 %{_pkgconfigdir}/libfakekey.pc
 
