@@ -7,7 +7,11 @@ License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://projects.o-hand.com/matchbox/sources/libfakekey/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	83dbde4d77e8baf0176fe4291d8a2303
+Patch0:		%{name}-build.patch
 URL:		http://projects.o-hand.com/matchbox/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXtst-devel
@@ -47,8 +51,13 @@ Statyczna biblioteka libfakekey.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
@@ -68,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog
 %attr(755,root,root) %{_libdir}/libfakekey.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libfakekey.so.[0-9]
 
 %files devel
 %defattr(644,root,root,755)
