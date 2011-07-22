@@ -1,9 +1,0 @@
---- libfakekey-0.1/tests/Makefile.am~	2005-10-03 00:07:34.000000000 +0200
-+++ libfakekey-0.1/tests/Makefile.am	2011-07-22 11:22:29.738463543 +0200
-@@ -2,4 +2,4 @@
- 
- noinst_PROGRAMS=fakekey-test
- 
--fakekey_test_LDADD=../src/libfakekey.la
-\ No newline at end of file
-+fakekey_test_LDADD=../src/libfakekey.la -lX11 -lXtst
