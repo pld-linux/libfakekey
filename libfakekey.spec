@@ -5,10 +5,10 @@ Version:	0.1
 Release:	3
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://projects.o-hand.com/matchbox/sources/libfakekey/%{version}/%{name}-%{version}.tar.bz2
+Source0:	https://matchbox-project.org/sources/libfakekey/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	83dbde4d77e8baf0176fe4291d8a2303
-URL:		http://projects.o-hand.com/matchbox/
-BuildRequires:	autoconf
+URL:		http://matchbox-project.org/
+BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
