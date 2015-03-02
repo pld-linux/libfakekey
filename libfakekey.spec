@@ -2,7 +2,7 @@ Summary:	X Virtual Keyboard library
 Summary(pl.UTF-8):	Biblioteka wirtualnej klawiatury dla X
 Name:		libfakekey
 Version:	0.1
-Release:	3
+Release:	4
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	https://matchbox-project.org/sources/libfakekey/%{version}/%{name}-%{version}.tar.bz2
