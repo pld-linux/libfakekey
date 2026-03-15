@@ -58,7 +58,7 @@ Statyczna biblioteka libfakekey.
 %{__autoheader}
 %{__automake}
 %configure
-%{__make} AM_LDFLAGS=-lX11
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -77,12 +77,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,root) %{_libdir}/libfakekey.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libfakekey.so.[0-9]
+%{_libdir}/libfakekey.so.*.*.*
+%ghost %{_libdir}/libfakekey.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libfakekey.so
+%{_libdir}/libfakekey.so
 %{_includedir}/fakekey
 %{_pkgconfigdir}/libfakekey.pc
 
