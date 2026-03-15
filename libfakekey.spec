@@ -1,12 +1,12 @@
 Summary:	X Virtual Keyboard library
 Summary(pl.UTF-8):	Biblioteka wirtualnej klawiatury dla X
 Name:		libfakekey
-Version:	0.1
-Release:	5
+Version:	0.3
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://downloads.yoctoproject.org/releases/matchbox/libfakekey/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	83dbde4d77e8baf0176fe4291d8a2303
+Source0:	https://git.yoctoproject.org/libfakekey/snapshot/%{name}-%{version}.tar.gz
+# Source0-md5:	32c4939ed9ec6c96f6b630fa5513687d
 URL:		https://www.yoctoproject.org/software-item/matchbox/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
@@ -52,6 +52,11 @@ Statyczna biblioteka libfakekey.
 %setup -q
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make} AM_LDFLAGS=-lX11
 
